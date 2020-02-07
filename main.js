@@ -38,6 +38,11 @@ document.getElementById("inputBtn").addEventListener("click", function () {
         })
     })
 
+    ///削除ボタン
+    removeBtn.addEventListener("click", function () {
+        toDoItem.remove()
+    })
+
     // itemWrap.insertAdjacentHTML("beforeend", toDoItem)
     itemWrap.appendChild(toDoItem)
     toDoItem.appendChild(toDoText)
