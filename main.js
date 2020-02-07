@@ -13,6 +13,7 @@ document.getElementById("inputBtn").addEventListener("click", function () {
 
     const editBtn = document.createElement("button")
     editBtn.textContent = "編集"
+
     //編集ボタン
     editBtn.addEventListener("click", function () {
         const editItem = document.createElement("input")
@@ -24,10 +25,23 @@ document.getElementById("inputBtn").addEventListener("click", function () {
         toDoItem.insertBefore(editItem, editBtn)
         this.remove()
 
+        //更新ボタン
+        const updateBtn = document.createElement("button")
+        updateBtn.textContent = "更新"
+        toDoItem.insertBefore(updateBtn, removeBtn)
+        updateBtn.addEventListener("click", function () {
+            toDoText.textContent = editItem.value
+            editItem.remove()
+            toDoItem.insertBefore(toDoText, updateBtn)
+            this.remove()
+            toDoItem.insertBefore(editBtn, removeBtn)
+        })
     })
+
     // itemWrap.insertAdjacentHTML("beforeend", toDoItem)
     itemWrap.appendChild(toDoItem)
     toDoItem.appendChild(toDoText)
     toDoItem.appendChild(editBtn)
     toDoItem.appendChild(removeBtn)
+    inputText.value = ""
 })
