@@ -11,10 +11,9 @@ document.getElementById("inputBtn").addEventListener("click", function () {
     ///ボタンが押されたあとのinputText
     document.getElementById("inputText").value = ""
 
+    //編集ボタン
     const editBtn = document.createElement("button")
     editBtn.textContent = "編集"
-
-    //編集ボタン
     editBtn.addEventListener("click", function () {
         const editItem = document.createElement("input")
         const hinanText = toDoText.previousSibling
