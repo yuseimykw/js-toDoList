@@ -7,9 +7,8 @@ document.getElementById("inputBtn").addEventListener("click", function () {
     toDoText.textContent = inputText
     removeBtn.textContent = "削除"
 
-
     // ///ボタンが押されたあとのinputText
-    // document.getElementById("inputText").value = ""
+    document.getElementById("inputText").value = ""
 
     //編集ボタン
     const editBtn = document.createElement("button")
@@ -45,5 +44,4 @@ document.getElementById("inputBtn").addEventListener("click", function () {
     toDoItem.appendChild(toDoText)
     toDoItem.appendChild(editBtn)
     toDoItem.appendChild(removeBtn)
-    inputText.value = ""
 })
